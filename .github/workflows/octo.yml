@@ -18,10 +18,10 @@ jobs:
       - name: Install Docker Compose
         run: |
           sudo apt-get update
-          sudo apt-get install -y docker-compose  # Устанавливаем docker-compose
+          sudo apt-get install -y docker-compose  
 
       - name: Build Docker images
-        run: docker-compose -f docker-compose.yml build  # Строим все образы Docker
+        run: docker-compose -f docker-compose.yml build  
     
 
   deploy:
@@ -35,7 +35,7 @@ jobs:
       - name: Install Docker Compose
         run: |
           sudo apt-get update
-          sudo apt-get install -y docker-compose  # Устанавливаем docker-compose
+          sudo apt-get install -y docker-compose 
 
       - name: Deploy using Docker Compose
         run: docker-compose -f docker-compose.yml up -d 
